@@ -1,0 +1,5 @@
+.env
+secrets.toml
+faiss_index/
+__pycache__/
+*.pdf
