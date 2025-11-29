@@ -36,12 +36,11 @@ Ever stared at a 50-page technical manual or a dense research paper and wished y
 ---
 
 ## How to Run Locally
-## ⚙️ How to Run Locally
 
 Follow these steps to get InsightDoc AI running on your machine in 5 minutes.
 
 ### 1. Clone the Repo
-git clone [https://github.com/YOUR_USERNAME/insight-doc-ai.git](https://github.com/YOUR_USERNAME/insight-doc-ai.git)
+git clone [https://github.com/Priyank-2005/insight-doc-ai.git](https://github.com/Priyank-2005/insight-doc-ai.git)
 cd insight-doc-ai
 
 ### 2. Install Dependencies
@@ -55,15 +54,18 @@ GOOGLE_API_KEY="AIzaSy...YOUR_KEY_HERE"
 ### 4. Run the App
 streamlit run app.py
 
+---
 
 ## How It Works (The "RAG" Pipeline)
 
-Ingestion: The app reads your PDFs using PyPDF2.
-Chunking: It splits the massive text into smaller, manageable chunks (10,000 characters) using RecursiveCharacterTextSplitter.
-Embedding: These chunks are converted into mathematical vectors using the HuggingFace model. This happens on your laptop!
-Storage: The vectors are stored in a local FAISS index (a searchable database).
-Retrieval: When you ask a question, the app searches the FAISS index for the most similar text chunks.
-Generation: It sends your question + the relevant text chunks to Google Gemini, which generates the final human-like answer.
+- **Ingestion**: The app reads your PDFs using PyPDF2.
+- **Chunking**: It splits the massive text into smaller, manageable chunks (10,000 characters) using RecursiveCharacterTextSplitter.
+- **Embedding**: These chunks are converted into mathematical vectors using the HuggingFace model. This happens on your laptop!
+- **Storage**: The vectors are stored in a local FAISS index (a searchable database).
+- **Retrieval**: When you ask a question, the app searches the FAISS index for the most similar text chunks.
+- **Generation**: It sends your question + the relevant text chunks to Google Gemini, which generates the final human-like answer.
+
+---
 
 Created by [Priyank Bohra] | Data Analyst & Python Developer
 
